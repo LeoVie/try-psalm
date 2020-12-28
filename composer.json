@@ -1,0 +1,27 @@
+{
+    "name": "leovie/try-psalm",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Leo Viezens",
+            "email": "leo.viezens@web.de"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "LeoVie\\TryPsalm\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LeoVie\\TryPsalm\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
