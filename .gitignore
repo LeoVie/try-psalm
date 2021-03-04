@@ -1,4 +1,5 @@
 .idea/
 vendor/
 build/coverage/
+bin/
 *.cache

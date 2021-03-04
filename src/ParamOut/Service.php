@@ -6,20 +6,23 @@ namespace LeoVie\TryPsalm\ParamOut;
 
 class Service
 {
-    /** @psalm-param-out string $string */
-    public function appendToString(?string &$string, string $appendix): void
+    /** @psalm-param-out string $text */
+    public function appendToString(?string &$text, string $appendix): void
     {
-        $string ??= '';
-        $string .= $appendix;
+        if ($text === null) {
+            $text = '';
+        }
+
+        $text .= $appendix;
     }
 
-    /** @psalm-param-out ?string $string */
-    public function appendToStringNullable(?string &$string, string $appendix): void
+    /** @psalm-param-out ?string $text */
+    public function appendToStringNullable(?string &$text, string $appendix): void
     {
-        if ($string === null) {
+        if ($text === null) {
             return;
         }
 
-        $string .= $appendix;
+        $text .= $appendix;
     }
 }

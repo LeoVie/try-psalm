@@ -16,6 +16,8 @@ class UserUpdater
 
     public function foo(): void
     {
-        $this->deleteUser(new PDO(''), $_GET["user_id"]); // Detected tainted SQL
+        /** @var int $userId */
+        $userId = $_GET["user_id"];
+        $this->deleteUser(new PDO(''), $userId); // Detected tainted SQL
     }
 }

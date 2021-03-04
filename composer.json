@@ -1,5 +1,6 @@
 {
     "name": "leovie/try-psalm",
+    "description": "try psalm",
     "type": "project",
     "authors": [
         {
@@ -22,7 +23,8 @@
         "vimeo/psalm": "^4.3"
     },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "bin-dir": "bin"
     },
   "require": {
     "ext-pdo": "*"

@@ -23,8 +23,13 @@ class Service
 
     public function takeArray(array $array): void
     {
+        // $array kann alles enthalten
         $this->takeInt($array[0]); // Argument 1 of takeInt cannot be mixed, expecting int
+        $this->takeString($array[0]); // Argument 1 of takeString cannot be mixed, expecting string
+
         $this->validateStringArray($array);
+
+        // $array enthält Strings
         $this->takeInt($array[0]); // Argument 1 of takeInt expects int, string provided
         $this->takeString($array[0]); // no error
     }
